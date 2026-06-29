@@ -1138,6 +1138,9 @@
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
+        /* Dark theme adaptation for contributions chart */
+        [data-theme="dark"] #githubChartImg {
+            filter: invert(0.95) hue-rotate(180deg) brightness(1.4) contrast(1.1);
         }
 
         /* ─── GROWTH ─── */
@@ -2263,10 +2266,19 @@
         </div>
 
         <div class="metrics-grid reveal">
+            <!-- GitHub Contributions (Full Width) -->
+            <div class="metrics-card github-contrib" style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 16px;">
+                <h4 class="metrics-card-title">GitHub Contribution Calendar</h4>
+                <p class="metrics-card-subtitle">Public contributions over the last 12 months</p>
+                <div class="github-chart-container" style="width: 100%; overflow-x: auto; padding: 20px; background: var(--grey-100); border: 1px solid var(--grey-200); border-radius: 4px; display: flex; justify-content: center; align-items: center; transition: var(--transition-theme);">
+                    <img id="githubChartImg" src="https://ghchart.rshah.org/c8a96e/jeevangudavalli7" alt="Jeevan's GitHub Contributions Chart" style="min-width: 720px; max-width: 100%; height: auto; display: block;" />
+                </div>
+            </div>
+
             <!-- GitHub Stats Card -->
             <div class="metrics-card github-stats">
-                <h4 class="metrics-card-title">GitHub Activity</h4>
-                <p class="metrics-card-subtitle">Real-time repository statistics &amp; language breakdown</p>
+                <h4 class="metrics-card-title">Repository Metrics</h4>
+                <p class="metrics-card-subtitle">Real-time statistics &amp; top languages</p>
                 <div class="github-widgets">
                     <img id="githubStats" class="github-widget-img" src="https://github-readme-stats.vercel.app/api?username=jeevangudavalli7&show_icons=true&theme=transparent&title_color=C8A96E&icon_color=C8A96E&text_color=5A5A54&border_color=E5E5E2" alt="Jeevan's GitHub Stats" />
                     <img id="githubLangs" class="github-widget-img" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeevangudavalli7&layout=compact&theme=transparent&title_color=C8A96E&text_color=5A5A54&border_color=E5E5E2" alt="Jeevan's Top Languages" />
