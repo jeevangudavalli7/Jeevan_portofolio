@@ -298,6 +298,30 @@
             transition: var(--transition-theme);
         }
 
+        .hero-bg-brace {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: clamp(220px, 22vw, 420px);
+            height: clamp(220px, 22vw, 420px);
+            color: var(--grey-200);
+            opacity: 0.35;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+            transition: var(--transition-theme), var(--transition-fast);
+        }
+        .brace-left {
+            left: -40px;
+        }
+        .brace-right {
+            right: -40px;
+        }
+
+        [data-theme="dark"] .hero-bg-brace {
+            opacity: 0.22;
+        }
+
         .hero-left {
             position: relative;
             z-index: 1;
@@ -1605,6 +1629,17 @@
                 font-size: 20vw;
                 right: -20px;
             }
+            .hero-bg-brace {
+                width: 28vw;
+                height: 28vw;
+                opacity: 0.2;
+            }
+            .brace-left {
+                left: -20px;
+            }
+            .brace-right {
+                right: -20px;
+            }
             .about-grid,
             .contact-grid,
             .investors-wrap,
@@ -1961,6 +1996,13 @@
 
     <!-- ─── HERO ─── -->
     <section id="hero">
+        <!-- Background SVG Curly Braces -->
+        <div class="hero-bg-brace brace-left" aria-hidden="true">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"><path d="M70,10 C50,10 40,25 40,40 C40,48 45,50 30,50 C45,50 40,52 40,60 C40,75 50,90 70,90" /></svg>
+        </div>
+        <div class="hero-bg-brace brace-right" aria-hidden="true">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"><path d="M30,10 C50,10 60,25 60,40 C60,48 55,50 70,50 C55,50 60,52 60,60 C60,75 50,90 30,90" /></svg>
+        </div>
         <div class="hero-bg-text">AI</div>
 
         <div class="hero-left">
@@ -1968,7 +2010,7 @@
 
             <!-- Replace 'YourName' -->
             <h1 class="hero-name">
-                { Jeevan<br><em>Gudavalli.</em> }
+                Jeevan<br><em>Gudavalli.</em>
             </h1>
             <p class="hero-title">Software Engineer &nbsp;·&nbsp; AI &amp; Full-Stack Developer</p>
 
