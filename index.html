@@ -284,8 +284,10 @@
         .hero-bg-text {
             position: absolute;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            left: 0;
+            width: 100%;
+            transform: translateY(-50%);
+            text-align: center;
             font-family: var(--font-display);
             font-size: clamp(220px, 35vw, 550px);
             font-weight: 200;
@@ -293,7 +295,7 @@
             line-height: 1;
             pointer-events: none;
             user-select: none;
-            letter-spacing: 0.12em;
+            letter-spacing: -0.04em;
             z-index: 0;
             transition: var(--transition-theme);
             opacity: 0.28;
@@ -1608,10 +1610,11 @@
             }
             .hero-bg-text {
                 font-size: 45vw;
-                left: 50%;
+                left: 0;
+                width: 100%;
                 top: 50%;
-                transform: translate(-50%, -50%);
-                letter-spacing: 0.08em;
+                transform: translateY(-50%);
+                text-align: center;
             }
             .about-grid,
             .contact-grid,
@@ -1969,7 +1972,7 @@
 
     <!-- ─── HERO ─── -->
     <section id="hero">
-        <div class="hero-bg-text">{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+        <div class="hero-bg-text">{&nbsp;&nbsp;&nbsp;&nbsp;}</div>
 
         <div class="hero-left">
             <div class="hero-badge">Available for Work</div>
