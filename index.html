@@ -171,6 +171,10 @@
             list-style: none;
         }
 
+        .mobile-only {
+            display: none !important;
+        }
+
         .nav-links a {
             font-family: var(--font-mono);
             font-size: 11px;
@@ -1683,8 +1687,10 @@
                 height: 34px;
             }
             .nav-cta {
-                padding: 8px 14px;
-                font-size: 10px;
+                display: none !important;
+            }
+            .mobile-only {
+                display: block !important;
             }
             
             @keyframes slideDown {
@@ -1951,6 +1957,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#growth">Growth</a></li>
             <li><a href="#investors">Investors</a></li>
+            <li class="mobile-only"><a href="#contact">Contact</a></li>
         </ul>
         <!-- THEME TOGGLE -->
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
